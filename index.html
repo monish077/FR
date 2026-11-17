@@ -4,28 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#071629" />
+  <meta name="theme-color" content="#08264A" />
 
   <title>F.R. Singhvi | Sansera Engineering</title>
 
   <style>
     /* ==========================================================
        SANSERA — F.R. SINGHVI
-       DEEP BLUE EXECUTIVE PROFILE
+       DEEP NAVY BLUE EXECUTIVE PROFILE
     ========================================================== */
 
     :root {
-      --navy: #071629;
-      --navy-2: #091d36;
-      --navy-3: #0d2745;
+      --navy: #08264A;
+      --navy-dark: #061C37;
+      --navy-light: #0C315B;
+      --navy-panel: #0A2B50;
+
       --blue: #07529A;
       --blue-light: #168BFF;
-      --blue-soft: #6bb7ff;
+      --blue-soft: #72B9FF;
 
-      --white: #ffffff;
-      --text: #edf4fc;
-      --muted: #a6b5c8;
-      --line: rgba(255,255,255,.12);
+      --white: #FFFFFF;
+      --text: #F1F6FC;
+      --muted: #B5C6D9;
+      --line: rgba(255,255,255,.16);
     }
 
     * {
@@ -52,7 +54,7 @@
         Arial,
         sans-serif;
 
-      background: var(--navy);
+      background: var(--navy-dark);
       color: var(--white);
 
       -webkit-font-smoothing: antialiased;
@@ -77,16 +79,18 @@
       width: 100%;
       height: 100svh;
       min-height: 0;
+
       display: flex;
       flex-direction: column;
+
       overflow: hidden;
 
       background:
         linear-gradient(
           125deg,
-          #071629 0%,
-          #091d36 48%,
-          #0b213b 100%
+          #08264A 0%,
+          #092B52 48%,
+          #061D39 100%
         );
     }
 
@@ -96,8 +100,9 @@
 
     .hero {
       position: relative;
+
       width: 100%;
-      height: 72%;
+      height: 70%;
       min-height: 0;
 
       display: grid;
@@ -107,23 +112,25 @@
 
       background:
         radial-gradient(
-          circle at 76% 48%,
-          rgba(22,139,255,.13),
-          transparent 34%
+          ellipse at 77% 48%,
+          rgba(22,139,255,.19),
+          transparent 37%
         ),
         linear-gradient(
           110deg,
-          #071629 0%,
-          #091d36 52%,
-          #0b2340 100%
+          #08264A 0%,
+          #0A2D55 52%,
+          #092342 100%
         );
     }
 
     .hero::after {
       content: "";
+
       position: absolute;
       right: 0;
       top: 0;
+
       width: 1px;
       height: 100%;
 
@@ -131,7 +138,7 @@
         linear-gradient(
           to bottom,
           transparent,
-          rgba(22,139,255,.38),
+          rgba(114,185,255,.5),
           transparent
         );
 
@@ -151,73 +158,78 @@
 
       padding:
         40px
-        clamp(45px, 7vw, 115px)
+        clamp(35px, 6vw, 100px)
         50px
         clamp(35px, 7vw, 115px);
     }
 
     .hero-copy {
       width: 100%;
-      max-width: 650px;
+      max-width: 720px;
     }
 
     .eyebrow {
       display: flex;
       align-items: center;
-      gap: 11px;
-      margin-bottom: 22px;
 
-      color: #9fb2c9;
-      font-size: 9px;
+      gap: 11px;
+      margin-bottom: 24px;
+
+      color: #B8CCE2;
+
+      font-size: 10px;
       font-weight: 800;
-      letter-spacing: 3.2px;
+
+      letter-spacing: 3px;
       text-transform: uppercase;
     }
 
     .eyebrow-line {
-      width: 34px;
+      width: 36px;
       height: 2px;
+
       background: var(--blue-light);
-      box-shadow: 0 0 12px rgba(22,139,255,.45);
+
+      box-shadow:
+        0 0 14px rgba(22,139,255,.5);
     }
 
     /* ==========================================================
-       NAME
+       NAME — SINGLE LINE
     ========================================================== */
 
     .name {
-      position: relative;
-      color: #ffffff;
+      color: #FFFFFF;
 
-      font-size: clamp(52px, 7vw, 100px);
+      font-size:
+        clamp(42px, 5.4vw, 78px);
+
       font-weight: 800;
-      letter-spacing: -5px;
-      line-height: .88;
-      max-width: 650px;
-    }
 
-    .name span {
-      display: block;
-    }
+      letter-spacing: -3.5px;
+      line-height: 1.05;
 
-    .name .surname {
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(211,230,251,.75);
+      white-space: nowrap;
+
+      text-shadow:
+        0 8px 35px rgba(0,0,0,.18);
     }
 
     .name-accent {
-      width: 78px;
+      width: 82px;
       height: 5px;
+
       margin-top: 25px;
 
       background:
         linear-gradient(
           90deg,
-          var(--blue),
-          var(--blue-light)
+          #07529A,
+          #168BFF
         );
 
-      box-shadow: 0 0 24px rgba(22,139,255,.35);
+      box-shadow:
+        0 0 25px rgba(22,139,255,.4);
     }
 
     /* ==========================================================
@@ -225,21 +237,26 @@
     ========================================================== */
 
     .designation {
-      margin-top: 18px;
-      color: #f1f5fa;
+      margin-top: 19px;
 
-      font-size: clamp(18px, 2vw, 25px);
+      color: #FFFFFF;
+
+      font-size:
+        clamp(19px, 2vw, 26px);
+
       font-weight: 500;
       letter-spacing: -.4px;
     }
 
     .company {
-      margin-top: 7px;
-      color: var(--blue-soft);
+      margin-top: 9px;
 
-      font-size: 10px;
+      color: #82C2FF;
+
+      font-size: 11px;
       font-weight: 800;
-      letter-spacing: 2.4px;
+
+      letter-spacing: 2.5px;
       text-transform: uppercase;
     }
 
@@ -248,14 +265,17 @@
     ========================================================== */
 
     .leadership-copy {
-      max-width: 510px;
-      margin-top: 25px;
+      max-width: 520px;
 
-      color: #a8b7ca;
+      margin-top: 27px;
 
-      font-size: clamp(12px, 1.1vw, 15px);
+      color: #C0D0E2;
+
+      font-size:
+        clamp(13px, 1.1vw, 15px);
+
       font-weight: 400;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     /* ==========================================================
@@ -265,24 +285,28 @@
     .location {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-top: 24px;
 
-      color: #b8c7d9;
-      font-size: 10px;
+      gap: 9px;
+      margin-top: 25px;
+
+      color: #C8D8E9;
+
+      font-size: 11px;
       font-weight: 600;
-      letter-spacing: 1.4px;
+
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
     .location-icon {
-      width: 15px;
-      height: 15px;
+      width: 16px;
+      height: 16px;
+
       color: var(--blue-light);
     }
 
     /* ==========================================================
-       RIGHT PORTRAIT AREA
+       RIGHT PORTRAIT
     ========================================================== */
 
     .hero-right {
@@ -299,8 +323,8 @@
     .portrait-stage {
       position: relative;
 
-      width: min(38vw, 530px);
-      height: min(38vw, 530px);
+      width: min(40vw, 570px);
+      height: min(40vw, 570px);
 
       display: flex;
       align-items: flex-end;
@@ -308,11 +332,12 @@
     }
 
     /* ==========================================================
-       ARCHITECTURAL BLUE FRAME
+       BLUE ARCHITECTURAL FRAME
     ========================================================== */
 
     .portrait-stage::before {
       content: "";
+
       position: absolute;
 
       width: 76%;
@@ -321,19 +346,20 @@
       right: 4%;
       bottom: 2%;
 
-      border: 1px solid rgba(22,139,255,.45);
+      border: 1px solid rgba(114,185,255,.55);
       border-left: 0;
 
       transform: skewY(-8deg);
 
       box-shadow:
-        18px 0 80px rgba(22,139,255,.04);
+        18px 0 80px rgba(22,139,255,.08);
 
       z-index: 0;
     }
 
     .portrait-stage::after {
       content: "";
+
       position: absolute;
 
       width: 68%;
@@ -342,7 +368,8 @@
       right: 11%;
       bottom: 7%;
 
-      border: 1px solid rgba(107,183,255,.16);
+      border: 1px solid rgba(114,185,255,.22);
+
       transform: skewY(-8deg);
 
       z-index: 0;
@@ -355,37 +382,37 @@
     .portrait-glow {
       position: absolute;
 
-      width: 70%;
-      height: 70%;
+      width: 76%;
+      height: 76%;
 
-      right: 8%;
-      bottom: 8%;
+      right: 5%;
+      bottom: 5%;
 
       border-radius: 50%;
 
       background:
         radial-gradient(
           circle,
-          rgba(22,139,255,.20) 0%,
-          rgba(22,139,255,.06) 35%,
-          transparent 70%
+          rgba(22,139,255,.24) 0%,
+          rgba(22,139,255,.09) 38%,
+          transparent 72%
         );
 
-      filter: blur(35px);
+      filter: blur(38px);
+
       z-index: 0;
     }
 
     /* ==========================================================
-       TRANSPARENT PORTRAIT
-       FR.png has no background
+       TRANSPARENT IMAGE
     ========================================================== */
 
     .portrait {
       position: relative;
       z-index: 3;
 
-      width: min(34vw, 470px);
-      height: min(34vw, 470px);
+      width: min(38vw, 510px);
+      height: min(38vw, 510px);
 
       object-fit: contain;
       object-position: center bottom;
@@ -393,39 +420,25 @@
       background: transparent;
 
       filter:
-        drop-shadow(0 30px 40px rgba(0,0,0,.48));
+        drop-shadow(
+          0 28px 38px rgba(0,0,0,.4)
+        );
 
       transform: translateX(-2%);
     }
 
     /* ==========================================================
-       BACKGROUND NUMBER
+       CORNER DETAIL
     ========================================================== */
-
-    .portrait-number {
-      position: absolute;
-      z-index: 1;
-
-      right: 5%;
-      top: 8%;
-
-      color: rgba(107,183,255,.09);
-
-      font-size: clamp(110px, 15vw, 230px);
-      font-weight: 800;
-      line-height: 1;
-      letter-spacing: -12px;
-
-      user-select: none;
-    }
 
     .corner-mark {
       position: absolute;
+
       right: 10%;
       bottom: 7%;
 
-      width: 42px;
-      height: 42px;
+      width: 45px;
+      height: 45px;
 
       border-right: 2px solid var(--blue-light);
       border-bottom: 2px solid var(--blue-light);
@@ -441,13 +454,13 @@
       position: relative;
 
       width: 100%;
-      height: 28%;
+      height: 30%;
       min-height: 0;
 
       padding:
         0
         clamp(30px, 7vw, 115px)
-        24px;
+        34px;
 
       display: flex;
       align-items: flex-end;
@@ -455,89 +468,135 @@
       background:
         linear-gradient(
           180deg,
-          #091d36 0%,
-          #071629 100%
+          #0A2B50 0%,
+          #071F3C 100%
         );
     }
+
+    /* ==========================================================
+       INFORMATION GRID
+    ========================================================== */
 
     .information-grid {
       width: 100%;
 
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
 
-      border-top: 1px solid rgba(255,255,255,.13);
-      border-bottom: 1px solid rgba(255,255,255,.07);
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      background:
+        rgba(255,255,255,.035);
+
+      border-top:
+        1px solid rgba(160,205,255,.23);
+
+      border-bottom:
+        1px solid rgba(160,205,255,.12);
+
+      border-radius: 5px;
+
+      overflow: hidden;
     }
 
     .information-item {
       position: relative;
 
-      min-height: 100px;
-      padding: 21px 28px 20px 0;
+      min-height: 125px;
+
+      padding:
+        25px
+        25px
+        24px;
 
       display: flex;
       flex-direction: column;
       justify-content: center;
 
-      border-right: 1px solid rgba(255,255,255,.09);
+      border-right:
+        1px solid rgba(255,255,255,.12);
     }
 
     .information-item:first-child {
-      padding-left: 0;
+      padding-left: 30px;
     }
 
     .information-item:last-child {
       border-right: 0;
-      padding-right: 0;
     }
 
     .information-item::before {
       content: "";
+
       position: absolute;
 
       left: 0;
       top: -1px;
 
-      width: 30px;
-      height: 2px;
+      width: 42px;
+      height: 3px;
 
-      background: var(--blue-light);
-      box-shadow: 0 0 10px rgba(22,139,255,.3);
+      background:
+        linear-gradient(
+          90deg,
+          #07529A,
+          #168BFF
+        );
+
+      box-shadow:
+        0 0 15px rgba(22,139,255,.3);
     }
 
-    .information-label {
-      margin-bottom: 8px;
+    /* ==========================================================
+       INFORMATION LABEL
+    ========================================================== */
 
-      color: #8298b2;
-      font-size: 8px;
+    .information-label {
+      display: block;
+
+      margin-bottom: 11px;
+
+      color: #91B5D8;
+
+      font-size: 10px;
       font-weight: 800;
-      letter-spacing: 2px;
+
+      letter-spacing: 2.1px;
       text-transform: uppercase;
     }
 
-    .information-value {
-      color: #e9f1fa;
+    /* ==========================================================
+       INFORMATION VALUE
+    ========================================================== */
 
-      font-size: clamp(10px, 1vw, 13px);
-      font-weight: 500;
-      line-height: 1.5;
+    .information-value {
+      color: #FFFFFF;
+
+      font-size:
+        clamp(13px, 1.15vw, 16px);
+
+      font-weight: 600;
+
+      line-height: 1.6;
 
       overflow-wrap: anywhere;
     }
 
     .information-value a {
-      color: #ffffff;
-      transition: color 180ms ease;
+      color: #FFFFFF;
+
+      transition:
+        color 180ms ease;
     }
 
     .information-value a:hover {
-      color: var(--blue-soft);
+      color: #82C2FF;
     }
 
     .arrow {
-      color: var(--blue-light);
-      margin-left: 3px;
+      color: #65B3FF;
+      margin-left: 4px;
+      font-size: 15px;
     }
 
     /* ==========================================================
@@ -548,12 +607,13 @@
       position: absolute;
 
       right: clamp(30px, 7vw, 115px);
-      bottom: 5px;
+      bottom: 8px;
 
-      color: #60758e;
+      color: #829CB8;
 
-      font-size: 7px;
+      font-size: 8px;
       font-weight: 800;
+
       letter-spacing: 2.5px;
       text-transform: uppercase;
     }
@@ -564,17 +624,17 @@
 
     @media (max-width: 900px) {
       .hero {
-        height: 70%;
-        grid-template-columns: 52% 48%;
+        height: 69%;
+        grid-template-columns: 53% 47%;
       }
 
       .hero-left {
-        padding: 30px 25px 35px;
+        padding: 30px 20px 35px;
       }
 
       .name {
-        font-size: 58px;
-        letter-spacing: -3px;
+        font-size: clamp(40px, 5.2vw, 55px);
+        letter-spacing: -2.5px;
       }
 
       .leadership-copy {
@@ -582,23 +642,31 @@
       }
 
       .portrait-stage {
-        width: 38vw;
-        height: 38vw;
+        width: 42vw;
+        height: 42vw;
       }
 
       .portrait {
-        width: 36vw;
-        height: 36vw;
+        width: 40vw;
+        height: 40vw;
       }
 
       .information-section {
-        height: 30%;
-        padding: 0 25px 18px;
+        height: 31%;
+        padding: 0 22px 25px;
       }
 
       .information-item {
-        padding-left: 15px;
-        padding-right: 15px;
+        min-height: 110px;
+        padding: 18px 15px;
+      }
+
+      .information-item:first-child {
+        padding-left: 20px;
+      }
+
+      .information-value {
+        font-size: 12px;
       }
     }
 
@@ -608,64 +676,64 @@
 
     @media (max-width: 600px) {
       .hero {
-        height: 69%;
+        height: 68%;
         grid-template-columns: 58% 42%;
       }
 
       .hero-left {
-        padding: 28px 12px 25px 20px;
-        align-items: center;
+        padding: 25px 8px 20px 17px;
       }
 
       .eyebrow {
+        gap: 7px;
         margin-bottom: 15px;
-        font-size: 6px;
-        letter-spacing: 2px;
+        font-size: 5.5px;
+        letter-spacing: 1.5px;
       }
 
       .eyebrow-line {
-        width: 20px;
+        width: 19px;
       }
 
       .name {
-        font-size: 39px;
-        letter-spacing: -2.5px;
-        line-height: .9;
+        font-size: clamp(29px, 7.4vw, 42px);
+        letter-spacing: -1.8px;
+        white-space: nowrap;
       }
 
       .name-accent {
-        width: 45px;
+        width: 42px;
         height: 3px;
-        margin-top: 17px;
+        margin-top: 15px;
       }
 
       .designation {
-        margin-top: 12px;
-        font-size: 14px;
+        margin-top: 11px;
+        font-size: 13px;
       }
 
       .company {
         margin-top: 5px;
-        font-size: 6px;
-        letter-spacing: 1.5px;
+        font-size: 5.5px;
+        letter-spacing: 1.1px;
       }
 
       .leadership-copy {
-        margin-top: 16px;
-        max-width: 230px;
+        margin-top: 14px;
+        max-width: 220px;
         font-size: 8px;
-        line-height: 1.55;
+        line-height: 1.5;
       }
 
       .location {
-        margin-top: 15px;
-        font-size: 6px;
-        letter-spacing: 1px;
+        margin-top: 13px;
+        font-size: 5.5px;
+        letter-spacing: .8px;
       }
 
       .location-icon {
-        width: 11px;
-        height: 11px;
+        width: 10px;
+        height: 10px;
       }
 
       .portrait-stage {
@@ -683,12 +751,6 @@
         transform:
           translateX(-5%)
           translateY(1%);
-      }
-
-      .portrait-number {
-        right: -8%;
-        top: 14%;
-        font-size: 100px;
       }
 
       .portrait-stage::before {
@@ -713,50 +775,54 @@
       }
 
       .information-section {
-        height: 31%;
-        padding: 0 12px 10px;
+        height: 32%;
+        padding: 0 12px 13px;
       }
 
       .information-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        border-top: 1px solid rgba(255,255,255,.1);
       }
 
       .information-item {
-        min-height: 66px;
-        padding: 10px 10px 9px;
+        min-height: 76px;
+        padding: 11px 9px;
 
-        border-right: 1px solid rgba(255,255,255,.08);
-        border-bottom: 1px solid rgba(255,255,255,.08);
+        border-right: 1px solid rgba(255,255,255,.12);
+        border-bottom: 1px solid rgba(255,255,255,.12);
       }
 
-      .information-item:nth-child(2) {
-        border-right: 0;
+      .information-item:first-child {
+        padding-left: 12px;
       }
 
-      .information-item:nth-child(3) {
-        border-bottom: 0;
-      }
-
+      .information-item:nth-child(2),
       .information-item:nth-child(4) {
         border-right: 0;
+      }
+
+      .information-item:nth-child(3),
+      .information-item:nth-child(4) {
         border-bottom: 0;
       }
 
       .information-item::before {
-        width: 20px;
-        height: 1.5px;
+        width: 24px;
+        height: 2px;
       }
 
       .information-label {
-        margin-bottom: 4px;
-        font-size: 5.5px;
-        letter-spacing: 1.4px;
+        margin-bottom: 6px;
+        font-size: 6px;
+        letter-spacing: 1.2px;
       }
 
       .information-value {
-        font-size: 7.5px;
-        line-height: 1.35;
+        font-size: 9px;
+        line-height: 1.4;
+      }
+
+      .arrow {
+        font-size: 10px;
       }
 
       .footer-mark {
@@ -770,16 +836,16 @@
 
     @media (max-height: 720px) and (min-width: 601px) {
       .hero {
-        height: 69%;
+        height: 68%;
       }
 
       .hero-left {
-        padding-top: 25px;
-        padding-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 25px;
       }
 
       .name {
-        font-size: 72px;
+        font-size: clamp(42px, 5vw, 65px);
       }
 
       .leadership-copy {
@@ -792,17 +858,17 @@
       }
 
       .portrait {
-        width: 31vw;
-        height: 31vw;
+        width: 32vw;
+        height: 32vw;
       }
 
       .information-section {
-        height: 31%;
-        padding-bottom: 15px;
+        height: 32%;
+        padding-bottom: 24px;
       }
 
       .information-item {
-        min-height: 82px;
+        min-height: 105px;
       }
     }
 
@@ -835,8 +901,7 @@
           </div>
 
           <h1 class="name">
-            <span>F.R.</span>
-            <span class="surname">Singhvi</span>
+            F.R. Singhvi
           </h1>
 
           <div class="name-accent"></div>
@@ -893,11 +958,7 @@
 
           <div class="portrait-glow"></div>
 
-          <div class="portrait-number">
-            01
-          </div>
-
-          <!-- Transparent image: no background -->
+          <!-- Transparent image -->
           <img
             src="FR.png"
             alt="F.R. Singhvi - Vice Chairman"
@@ -920,49 +981,75 @@
 
       <div class="information-grid">
 
+        <!-- COMPANY -->
         <div class="information-item">
-          <span class="information-label">Company</span>
+
+          <span class="information-label">
+            Company
+          </span>
+
           <div class="information-value">
             SANSERA ENGINEERING LIMITED
           </div>
+
         </div>
 
+        <!-- WEBSITE -->
         <div class="information-item">
-          <span class="information-label">Website</span>
+
+          <span class="information-label">
+            Website
+          </span>
+
           <div class="information-value">
+
             <a
-              href="https://www.sansera.in"
+              href="https://sansera.in"
               target="_blank"
               rel="noopener noreferrer"
             >
-              sansera.in
+              www.sansera.in
               <span class="arrow">↗</span>
             </a>
+
           </div>
+
         </div>
 
+        <!-- ADDRESS -->
         <div class="information-item">
-          <span class="information-label">Address</span>
+
+          <span class="information-label">
+            Address
+          </span>
+
           <div class="information-value">
             No 143/A, Jigani Link Road, Bengaluru
           </div>
+
         </div>
 
+        <!-- MAIL -->
         <div class="information-item">
-          <span class="information-label">Mail ID</span>
+
+          <span class="information-label">
+            Mail ID
+          </span>
+
           <div class="information-value">
+
             <a href="mailto:fr@sansera.in">
               fr@sansera.in
               <span class="arrow">↗</span>
             </a>
+
           </div>
+
         </div>
 
       </div>
 
-      <div class="footer-mark">
-        Leadership at Sansera
-      </div>
+
 
     </section>
 
