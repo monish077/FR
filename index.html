@@ -4,30 +4,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#08264A" />
+  <meta name="theme-color" content="#071629" />
 
   <title>F.R. Singhvi | Sansera Engineering</title>
 
   <style>
     /* ==========================================================
        SANSERA — F.R. SINGHVI
-       DEEP NAVY BLUE EXECUTIVE PROFILE
+       DEEP BLUE EXECUTIVE PROFILE
     ========================================================== */
 
     :root {
-      --navy: #08264A;
-      --navy-dark: #061C37;
-      --navy-light: #0C315B;
-      --navy-panel: #0A2B50;
-
+      --navy: #071629;
+      --navy-2: #091d36;
+      --navy-3: #0d2745;
       --blue: #07529A;
       --blue-light: #168BFF;
-      --blue-soft: #72B9FF;
+      --blue-soft: #6bb7ff;
 
-      --white: #FFFFFF;
-      --text: #F1F6FC;
-      --muted: #B5C6D9;
-      --line: rgba(255,255,255,.16);
+      --white: #ffffff;
+      --text: #edf4fc;
+      --muted: #a6b5c8;
+      --line: rgba(255,255,255,.12);
     }
 
     * {
@@ -54,7 +52,7 @@
         Arial,
         sans-serif;
 
-      background: var(--navy-dark);
+      background: var(--navy);
       color: var(--white);
 
       -webkit-font-smoothing: antialiased;
@@ -79,18 +77,16 @@
       width: 100%;
       height: 100svh;
       min-height: 0;
-
       display: flex;
       flex-direction: column;
-
       overflow: hidden;
 
       background:
         linear-gradient(
           125deg,
-          #08264A 0%,
-          #092B52 48%,
-          #061D39 100%
+          #071629 0%,
+          #091d36 48%,
+          #0b213b 100%
         );
     }
 
@@ -100,9 +96,8 @@
 
     .hero {
       position: relative;
-
       width: 100%;
-      height: 70%;
+      height: 72%;
       min-height: 0;
 
       display: grid;
@@ -112,25 +107,23 @@
 
       background:
         radial-gradient(
-          ellipse at 77% 48%,
-          rgba(22,139,255,.19),
-          transparent 37%
+          circle at 76% 48%,
+          rgba(22,139,255,.13),
+          transparent 34%
         ),
         linear-gradient(
           110deg,
-          #08264A 0%,
-          #0A2D55 52%,
-          #092342 100%
+          #071629 0%,
+          #091d36 52%,
+          #0b2340 100%
         );
     }
 
     .hero::after {
       content: "";
-
       position: absolute;
       right: 0;
       top: 0;
-
       width: 1px;
       height: 100%;
 
@@ -138,7 +131,7 @@
         linear-gradient(
           to bottom,
           transparent,
-          rgba(114,185,255,.5),
+          rgba(22,139,255,.38),
           transparent
         );
 
@@ -158,78 +151,73 @@
 
       padding:
         40px
-        clamp(35px, 6vw, 100px)
+        clamp(45px, 7vw, 115px)
         50px
         clamp(35px, 7vw, 115px);
     }
 
     .hero-copy {
       width: 100%;
-      max-width: 720px;
+      max-width: 650px;
     }
 
     .eyebrow {
       display: flex;
       align-items: center;
-
       gap: 11px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
 
-      color: #B8CCE2;
-
-      font-size: 10px;
+      color: #9fb2c9;
+      font-size: 9px;
       font-weight: 800;
-
-      letter-spacing: 3px;
+      letter-spacing: 3.2px;
       text-transform: uppercase;
     }
 
     .eyebrow-line {
-      width: 36px;
+      width: 34px;
       height: 2px;
-
       background: var(--blue-light);
-
-      box-shadow:
-        0 0 14px rgba(22,139,255,.5);
+      box-shadow: 0 0 12px rgba(22,139,255,.45);
     }
 
     /* ==========================================================
-       NAME — SINGLE LINE
+       NAME
     ========================================================== */
 
     .name {
-      color: #FFFFFF;
+      position: relative;
+      color: #ffffff;
 
-      font-size:
-        clamp(42px, 5.4vw, 78px);
-
+      font-size: clamp(52px, 7vw, 100px);
       font-weight: 800;
+      letter-spacing: -5px;
+      line-height: .88;
+      max-width: 650px;
+    }
 
-      letter-spacing: -3.5px;
-      line-height: 1.05;
+    .name span {
+      display: block;
+    }
 
-      white-space: nowrap;
-
-      text-shadow:
-        0 8px 35px rgba(0,0,0,.18);
+    .name .surname {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(211,230,251,.75);
     }
 
     .name-accent {
-      width: 82px;
+      width: 78px;
       height: 5px;
-
       margin-top: 25px;
 
       background:
         linear-gradient(
           90deg,
-          #07529A,
-          #168BFF
+          var(--blue),
+          var(--blue-light)
         );
 
-      box-shadow:
-        0 0 25px rgba(22,139,255,.4);
+      box-shadow: 0 0 24px rgba(22,139,255,.35);
     }
 
     /* ==========================================================
@@ -237,26 +225,21 @@
     ========================================================== */
 
     .designation {
-      margin-top: 19px;
+      margin-top: 18px;
+      color: #f1f5fa;
 
-      color: #FFFFFF;
-
-      font-size:
-        clamp(19px, 2vw, 26px);
-
+      font-size: clamp(18px, 2vw, 25px);
       font-weight: 500;
       letter-spacing: -.4px;
     }
 
     .company {
-      margin-top: 9px;
+      margin-top: 7px;
+      color: var(--blue-soft);
 
-      color: #82C2FF;
-
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 800;
-
-      letter-spacing: 2.5px;
+      letter-spacing: 2.4px;
       text-transform: uppercase;
     }
 
@@ -265,17 +248,14 @@
     ========================================================== */
 
     .leadership-copy {
-      max-width: 520px;
+      max-width: 510px;
+      margin-top: 25px;
 
-      margin-top: 27px;
+      color: #a8b7ca;
 
-      color: #C0D0E2;
-
-      font-size:
-        clamp(13px, 1.1vw, 15px);
-
+      font-size: clamp(12px, 1.1vw, 15px);
       font-weight: 400;
-      line-height: 1.75;
+      line-height: 1.7;
     }
 
     /* ==========================================================
@@ -285,28 +265,24 @@
     .location {
       display: flex;
       align-items: center;
+      gap: 8px;
+      margin-top: 24px;
 
-      gap: 9px;
-      margin-top: 25px;
-
-      color: #C8D8E9;
-
-      font-size: 11px;
+      color: #b8c7d9;
+      font-size: 10px;
       font-weight: 600;
-
-      letter-spacing: 1.5px;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
     }
 
     .location-icon {
-      width: 16px;
-      height: 16px;
-
+      width: 15px;
+      height: 15px;
       color: var(--blue-light);
     }
 
     /* ==========================================================
-       RIGHT PORTRAIT
+       RIGHT PORTRAIT AREA
     ========================================================== */
 
     .hero-right {
@@ -323,8 +299,8 @@
     .portrait-stage {
       position: relative;
 
-      width: min(40vw, 570px);
-      height: min(40vw, 570px);
+      width: min(38vw, 530px);
+      height: min(38vw, 530px);
 
       display: flex;
       align-items: flex-end;
@@ -332,12 +308,11 @@
     }
 
     /* ==========================================================
-       BLUE ARCHITECTURAL FRAME
+       ARCHITECTURAL BLUE FRAME
     ========================================================== */
 
     .portrait-stage::before {
       content: "";
-
       position: absolute;
 
       width: 76%;
@@ -346,20 +321,19 @@
       right: 4%;
       bottom: 2%;
 
-      border: 1px solid rgba(114,185,255,.55);
+      border: 1px solid rgba(22,139,255,.45);
       border-left: 0;
 
       transform: skewY(-8deg);
 
       box-shadow:
-        18px 0 80px rgba(22,139,255,.08);
+        18px 0 80px rgba(22,139,255,.04);
 
       z-index: 0;
     }
 
     .portrait-stage::after {
       content: "";
-
       position: absolute;
 
       width: 68%;
@@ -368,8 +342,7 @@
       right: 11%;
       bottom: 7%;
 
-      border: 1px solid rgba(114,185,255,.22);
-
+      border: 1px solid rgba(107,183,255,.16);
       transform: skewY(-8deg);
 
       z-index: 0;
@@ -382,37 +355,37 @@
     .portrait-glow {
       position: absolute;
 
-      width: 76%;
-      height: 76%;
+      width: 70%;
+      height: 70%;
 
-      right: 5%;
-      bottom: 5%;
+      right: 8%;
+      bottom: 8%;
 
       border-radius: 50%;
 
       background:
         radial-gradient(
           circle,
-          rgba(22,139,255,.24) 0%,
-          rgba(22,139,255,.09) 38%,
-          transparent 72%
+          rgba(22,139,255,.20) 0%,
+          rgba(22,139,255,.06) 35%,
+          transparent 70%
         );
 
-      filter: blur(38px);
-
+      filter: blur(35px);
       z-index: 0;
     }
 
     /* ==========================================================
-       TRANSPARENT IMAGE
+       TRANSPARENT PORTRAIT
+       FR.png has no background
     ========================================================== */
 
     .portrait {
       position: relative;
       z-index: 3;
 
-      width: min(38vw, 510px);
-      height: min(38vw, 510px);
+      width: min(34vw, 470px);
+      height: min(34vw, 470px);
 
       object-fit: contain;
       object-position: center bottom;
@@ -420,25 +393,39 @@
       background: transparent;
 
       filter:
-        drop-shadow(
-          0 28px 38px rgba(0,0,0,.4)
-        );
+        drop-shadow(0 30px 40px rgba(0,0,0,.48));
 
       transform: translateX(-2%);
     }
 
     /* ==========================================================
-       CORNER DETAIL
+       BACKGROUND NUMBER
     ========================================================== */
+
+    .portrait-number {
+      position: absolute;
+      z-index: 1;
+
+      right: 5%;
+      top: 8%;
+
+      color: rgba(107,183,255,.09);
+
+      font-size: clamp(110px, 15vw, 230px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -12px;
+
+      user-select: none;
+    }
 
     .corner-mark {
       position: absolute;
-
       right: 10%;
       bottom: 7%;
 
-      width: 45px;
-      height: 45px;
+      width: 42px;
+      height: 42px;
 
       border-right: 2px solid var(--blue-light);
       border-bottom: 2px solid var(--blue-light);
@@ -454,13 +441,13 @@
       position: relative;
 
       width: 100%;
-      height: 30%;
+      height: 28%;
       min-height: 0;
 
       padding:
         0
         clamp(30px, 7vw, 115px)
-        34px;
+        24px;
 
       display: flex;
       align-items: flex-end;
@@ -468,135 +455,89 @@
       background:
         linear-gradient(
           180deg,
-          #0A2B50 0%,
-          #071F3C 100%
+          #091d36 0%,
+          #071629 100%
         );
     }
-
-    /* ==========================================================
-       INFORMATION GRID
-    ========================================================== */
 
     .information-grid {
       width: 100%;
 
       display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
 
-      grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
-      background:
-        rgba(255,255,255,.035);
-
-      border-top:
-        1px solid rgba(160,205,255,.23);
-
-      border-bottom:
-        1px solid rgba(160,205,255,.12);
-
-      border-radius: 5px;
-
-      overflow: hidden;
+      border-top: 1px solid rgba(255,255,255,.13);
+      border-bottom: 1px solid rgba(255,255,255,.07);
     }
 
     .information-item {
       position: relative;
 
-      min-height: 125px;
-
-      padding:
-        25px
-        25px
-        24px;
+      min-height: 100px;
+      padding: 21px 28px 20px 0;
 
       display: flex;
       flex-direction: column;
       justify-content: center;
 
-      border-right:
-        1px solid rgba(255,255,255,.12);
+      border-right: 1px solid rgba(255,255,255,.09);
     }
 
     .information-item:first-child {
-      padding-left: 30px;
+      padding-left: 0;
     }
 
     .information-item:last-child {
       border-right: 0;
+      padding-right: 0;
     }
 
     .information-item::before {
       content: "";
-
       position: absolute;
 
       left: 0;
       top: -1px;
 
-      width: 42px;
-      height: 3px;
+      width: 30px;
+      height: 2px;
 
-      background:
-        linear-gradient(
-          90deg,
-          #07529A,
-          #168BFF
-        );
-
-      box-shadow:
-        0 0 15px rgba(22,139,255,.3);
+      background: var(--blue-light);
+      box-shadow: 0 0 10px rgba(22,139,255,.3);
     }
 
-    /* ==========================================================
-       INFORMATION LABEL
-    ========================================================== */
-
     .information-label {
-      display: block;
+      margin-bottom: 8px;
 
-      margin-bottom: 11px;
-
-      color: #91B5D8;
-
-      font-size: 10px;
+      color: #8298b2;
+      font-size: 8px;
       font-weight: 800;
-
-      letter-spacing: 2.1px;
+      letter-spacing: 2px;
       text-transform: uppercase;
     }
 
-    /* ==========================================================
-       INFORMATION VALUE
-    ========================================================== */
-
     .information-value {
-      color: #FFFFFF;
+      color: #e9f1fa;
 
-      font-size:
-        clamp(13px, 1.15vw, 16px);
-
-      font-weight: 600;
-
-      line-height: 1.6;
+      font-size: clamp(10px, 1vw, 13px);
+      font-weight: 500;
+      line-height: 1.5;
 
       overflow-wrap: anywhere;
     }
 
     .information-value a {
-      color: #FFFFFF;
-
-      transition:
-        color 180ms ease;
+      color: #ffffff;
+      transition: color 180ms ease;
     }
 
     .information-value a:hover {
-      color: #82C2FF;
+      color: var(--blue-soft);
     }
 
     .arrow {
-      color: #65B3FF;
-      margin-left: 4px;
-      font-size: 15px;
+      color: var(--blue-light);
+      margin-left: 3px;
     }
 
     /* ==========================================================
@@ -607,13 +548,12 @@
       position: absolute;
 
       right: clamp(30px, 7vw, 115px);
-      bottom: 8px;
+      bottom: 5px;
 
-      color: #829CB8;
+      color: #60758e;
 
-      font-size: 8px;
+      font-size: 7px;
       font-weight: 800;
-
       letter-spacing: 2.5px;
       text-transform: uppercase;
     }
@@ -624,17 +564,17 @@
 
     @media (max-width: 900px) {
       .hero {
-        height: 69%;
-        grid-template-columns: 53% 47%;
+        height: 70%;
+        grid-template-columns: 52% 48%;
       }
 
       .hero-left {
-        padding: 30px 20px 35px;
+        padding: 30px 25px 35px;
       }
 
       .name {
-        font-size: clamp(40px, 5.2vw, 55px);
-        letter-spacing: -2.5px;
+        font-size: 58px;
+        letter-spacing: -3px;
       }
 
       .leadership-copy {
@@ -642,31 +582,23 @@
       }
 
       .portrait-stage {
-        width: 42vw;
-        height: 42vw;
+        width: 38vw;
+        height: 38vw;
       }
 
       .portrait {
-        width: 40vw;
-        height: 40vw;
+        width: 36vw;
+        height: 36vw;
       }
 
       .information-section {
-        height: 31%;
-        padding: 0 22px 25px;
+        height: 30%;
+        padding: 0 25px 18px;
       }
 
       .information-item {
-        min-height: 110px;
-        padding: 18px 15px;
-      }
-
-      .information-item:first-child {
-        padding-left: 20px;
-      }
-
-      .information-value {
-        font-size: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
 
@@ -676,64 +608,64 @@
 
     @media (max-width: 600px) {
       .hero {
-        height: 68%;
+        height: 69%;
         grid-template-columns: 58% 42%;
       }
 
       .hero-left {
-        padding: 25px 8px 20px 17px;
+        padding: 28px 12px 25px 20px;
+        align-items: center;
       }
 
       .eyebrow {
-        gap: 7px;
         margin-bottom: 15px;
-        font-size: 5.5px;
-        letter-spacing: 1.5px;
+        font-size: 6px;
+        letter-spacing: 2px;
       }
 
       .eyebrow-line {
-        width: 19px;
+        width: 20px;
       }
 
       .name {
-        font-size: clamp(29px, 7.4vw, 42px);
-        letter-spacing: -1.8px;
-        white-space: nowrap;
+        font-size: 39px;
+        letter-spacing: -2.5px;
+        line-height: .9;
       }
 
       .name-accent {
-        width: 42px;
+        width: 45px;
         height: 3px;
-        margin-top: 15px;
+        margin-top: 17px;
       }
 
       .designation {
-        margin-top: 11px;
-        font-size: 13px;
+        margin-top: 12px;
+        font-size: 14px;
       }
 
       .company {
         margin-top: 5px;
-        font-size: 5.5px;
-        letter-spacing: 1.1px;
+        font-size: 6px;
+        letter-spacing: 1.5px;
       }
 
       .leadership-copy {
-        margin-top: 14px;
-        max-width: 220px;
+        margin-top: 16px;
+        max-width: 230px;
         font-size: 8px;
-        line-height: 1.5;
+        line-height: 1.55;
       }
 
       .location {
-        margin-top: 13px;
-        font-size: 5.5px;
-        letter-spacing: .8px;
+        margin-top: 15px;
+        font-size: 6px;
+        letter-spacing: 1px;
       }
 
       .location-icon {
-        width: 10px;
-        height: 10px;
+        width: 11px;
+        height: 11px;
       }
 
       .portrait-stage {
@@ -751,6 +683,12 @@
         transform:
           translateX(-5%)
           translateY(1%);
+      }
+
+      .portrait-number {
+        right: -8%;
+        top: 14%;
+        font-size: 100px;
       }
 
       .portrait-stage::before {
@@ -775,54 +713,50 @@
       }
 
       .information-section {
-        height: 32%;
-        padding: 0 12px 13px;
+        height: 31%;
+        padding: 0 12px 10px;
       }
 
       .information-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-top: 1px solid rgba(255,255,255,.1);
       }
 
       .information-item {
-        min-height: 76px;
-        padding: 11px 9px;
+        min-height: 66px;
+        padding: 10px 10px 9px;
 
-        border-right: 1px solid rgba(255,255,255,.12);
-        border-bottom: 1px solid rgba(255,255,255,.12);
+        border-right: 1px solid rgba(255,255,255,.08);
+        border-bottom: 1px solid rgba(255,255,255,.08);
       }
 
-      .information-item:first-child {
-        padding-left: 12px;
-      }
-
-      .information-item:nth-child(2),
-      .information-item:nth-child(4) {
+      .information-item:nth-child(2) {
         border-right: 0;
       }
 
-      .information-item:nth-child(3),
+      .information-item:nth-child(3) {
+        border-bottom: 0;
+      }
+
       .information-item:nth-child(4) {
+        border-right: 0;
         border-bottom: 0;
       }
 
       .information-item::before {
-        width: 24px;
-        height: 2px;
+        width: 20px;
+        height: 1.5px;
       }
 
       .information-label {
-        margin-bottom: 6px;
-        font-size: 6px;
-        letter-spacing: 1.2px;
+        margin-bottom: 4px;
+        font-size: 5.5px;
+        letter-spacing: 1.4px;
       }
 
       .information-value {
-        font-size: 9px;
-        line-height: 1.4;
-      }
-
-      .arrow {
-        font-size: 10px;
+        font-size: 7.5px;
+        line-height: 1.35;
       }
 
       .footer-mark {
@@ -836,16 +770,16 @@
 
     @media (max-height: 720px) and (min-width: 601px) {
       .hero {
-        height: 68%;
+        height: 69%;
       }
 
       .hero-left {
-        padding-top: 20px;
-        padding-bottom: 25px;
+        padding-top: 25px;
+        padding-bottom: 30px;
       }
 
       .name {
-        font-size: clamp(42px, 5vw, 65px);
+        font-size: 72px;
       }
 
       .leadership-copy {
@@ -858,17 +792,17 @@
       }
 
       .portrait {
-        width: 32vw;
-        height: 32vw;
+        width: 31vw;
+        height: 31vw;
       }
 
       .information-section {
-        height: 32%;
-        padding-bottom: 24px;
+        height: 31%;
+        padding-bottom: 15px;
       }
 
       .information-item {
-        min-height: 105px;
+        min-height: 82px;
       }
     }
 
@@ -901,7 +835,8 @@
           </div>
 
           <h1 class="name">
-            F.R. Singhvi
+            <span>F.R.</span>
+            <span class="surname">Singhvi</span>
           </h1>
 
           <div class="name-accent"></div>
@@ -958,7 +893,11 @@
 
           <div class="portrait-glow"></div>
 
-          <!-- Transparent image -->
+          <div class="portrait-number">
+            01
+          </div>
+
+          <!-- Transparent image: no background -->
           <img
             src="FR.png"
             alt="F.R. Singhvi - Vice Chairman"
@@ -981,75 +920,49 @@
 
       <div class="information-grid">
 
-        <!-- COMPANY -->
         <div class="information-item">
-
-          <span class="information-label">
-            Company
-          </span>
-
+          <span class="information-label">Company</span>
           <div class="information-value">
             SANSERA ENGINEERING LIMITED
           </div>
-
         </div>
 
-        <!-- WEBSITE -->
         <div class="information-item">
-
-          <span class="information-label">
-            Website
-          </span>
-
+          <span class="information-label">Website</span>
           <div class="information-value">
-
             <a
               href="https://www.sansera.in"
               target="_blank"
               rel="noopener noreferrer"
             >
-              www.sansera.in
+              sansera.in
               <span class="arrow">↗</span>
             </a>
-
           </div>
-
         </div>
 
-        <!-- ADDRESS -->
         <div class="information-item">
-
-          <span class="information-label">
-            Address
-          </span>
-
+          <span class="information-label">Address</span>
           <div class="information-value">
             No 143/A, Jigani Link Road, Bengaluru
           </div>
-
         </div>
 
-        <!-- MAIL -->
         <div class="information-item">
-
-          <span class="information-label">
-            Mail ID
-          </span>
-
+          <span class="information-label">Mail ID</span>
           <div class="information-value">
-
             <a href="mailto:fr@sansera.in">
               fr@sansera.in
               <span class="arrow">↗</span>
             </a>
-
           </div>
-
         </div>
 
       </div>
 
-
+      <div class="footer-mark">
+        Leadership at Sansera
+      </div>
 
     </section>
 
