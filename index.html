@@ -1,0 +1,1059 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08264A" />
+
+  <title>F.R. Singhvi | Sansera Engineering</title>
+
+  <style>
+    /* ==========================================================
+       SANSERA — F.R. SINGHVI
+       DEEP NAVY BLUE EXECUTIVE PROFILE
+    ========================================================== */
+
+    :root {
+      --navy: #08264A;
+      --navy-dark: #061C37;
+      --navy-light: #0C315B;
+      --navy-panel: #0A2B50;
+
+      --blue: #07529A;
+      --blue-light: #168BFF;
+      --blue-soft: #72B9FF;
+
+      --white: #FFFFFF;
+      --text: #F1F6FC;
+      --muted: #B5C6D9;
+      --line: rgba(255,255,255,.16);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      min-height: 100svh;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+      background: var(--navy-dark);
+      color: var(--white);
+
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* ==========================================================
+       MAIN PAGE
+    ========================================================== */
+
+    .executive-page {
+      width: 100%;
+      height: 100svh;
+      min-height: 0;
+
+      display: flex;
+      flex-direction: column;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          125deg,
+          #08264A 0%,
+          #092B52 48%,
+          #061D39 100%
+        );
+    }
+
+    /* ==========================================================
+       HERO
+    ========================================================== */
+
+    .hero {
+      position: relative;
+
+      width: 100%;
+      height: 70%;
+      min-height: 0;
+
+      display: grid;
+      grid-template-columns: 55% 45%;
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          ellipse at 77% 48%,
+          rgba(22,139,255,.19),
+          transparent 37%
+        ),
+        linear-gradient(
+          110deg,
+          #08264A 0%,
+          #0A2D55 52%,
+          #092342 100%
+        );
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      width: 1px;
+      height: 100%;
+
+      background:
+        linear-gradient(
+          to bottom,
+          transparent,
+          rgba(114,185,255,.5),
+          transparent
+        );
+
+      pointer-events: none;
+    }
+
+    /* ==========================================================
+       LEFT CONTENT
+    ========================================================== */
+
+    .hero-left {
+      position: relative;
+      z-index: 5;
+
+      display: flex;
+      align-items: center;
+
+      padding:
+        40px
+        clamp(35px, 6vw, 100px)
+        50px
+        clamp(35px, 7vw, 115px);
+    }
+
+    .hero-copy {
+      width: 100%;
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+
+      gap: 11px;
+      margin-bottom: 24px;
+
+      color: #B8CCE2;
+
+      font-size: 10px;
+      font-weight: 800;
+
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-line {
+      width: 36px;
+      height: 2px;
+
+      background: var(--blue-light);
+
+      box-shadow:
+        0 0 14px rgba(22,139,255,.5);
+    }
+
+    /* ==========================================================
+       NAME — SINGLE LINE
+    ========================================================== */
+
+    .name {
+      color: #FFFFFF;
+
+      font-size:
+        clamp(42px, 5.4vw, 78px);
+
+      font-weight: 800;
+
+      letter-spacing: -3.5px;
+      line-height: 1.05;
+
+      white-space: nowrap;
+
+      text-shadow:
+        0 8px 35px rgba(0,0,0,.18);
+    }
+
+    .name-accent {
+      width: 82px;
+      height: 5px;
+
+      margin-top: 25px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #07529A,
+          #168BFF
+        );
+
+      box-shadow:
+        0 0 25px rgba(22,139,255,.4);
+    }
+
+    /* ==========================================================
+       DESIGNATION
+    ========================================================== */
+
+    .designation {
+      margin-top: 19px;
+
+      color: #FFFFFF;
+
+      font-size:
+        clamp(19px, 2vw, 26px);
+
+      font-weight: 500;
+      letter-spacing: -.4px;
+    }
+
+    .company {
+      margin-top: 9px;
+
+      color: #82C2FF;
+
+      font-size: 11px;
+      font-weight: 800;
+
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================
+       LEADERSHIP STATEMENT
+    ========================================================== */
+
+    .leadership-copy {
+      max-width: 520px;
+
+      margin-top: 27px;
+
+      color: #C0D0E2;
+
+      font-size:
+        clamp(13px, 1.1vw, 15px);
+
+      font-weight: 400;
+      line-height: 1.75;
+    }
+
+    /* ==========================================================
+       LOCATION
+    ========================================================== */
+
+    .location {
+      display: flex;
+      align-items: center;
+
+      gap: 9px;
+      margin-top: 25px;
+
+      color: #C8D8E9;
+
+      font-size: 11px;
+      font-weight: 600;
+
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .location-icon {
+      width: 16px;
+      height: 16px;
+
+      color: var(--blue-light);
+    }
+
+    /* ==========================================================
+       RIGHT PORTRAIT
+    ========================================================== */
+
+    .hero-right {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-width: 0;
+      overflow: visible;
+    }
+
+    .portrait-stage {
+      position: relative;
+
+      width: min(40vw, 570px);
+      height: min(40vw, 570px);
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    /* ==========================================================
+       BLUE ARCHITECTURAL FRAME
+    ========================================================== */
+
+    .portrait-stage::before {
+      content: "";
+
+      position: absolute;
+
+      width: 76%;
+      height: 88%;
+
+      right: 4%;
+      bottom: 2%;
+
+      border: 1px solid rgba(114,185,255,.55);
+      border-left: 0;
+
+      transform: skewY(-8deg);
+
+      box-shadow:
+        18px 0 80px rgba(22,139,255,.08);
+
+      z-index: 0;
+    }
+
+    .portrait-stage::after {
+      content: "";
+
+      position: absolute;
+
+      width: 68%;
+      height: 80%;
+
+      right: 11%;
+      bottom: 7%;
+
+      border: 1px solid rgba(114,185,255,.22);
+
+      transform: skewY(-8deg);
+
+      z-index: 0;
+    }
+
+    /* ==========================================================
+       PORTRAIT GLOW
+    ========================================================== */
+
+    .portrait-glow {
+      position: absolute;
+
+      width: 76%;
+      height: 76%;
+
+      right: 5%;
+      bottom: 5%;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(22,139,255,.24) 0%,
+          rgba(22,139,255,.09) 38%,
+          transparent 72%
+        );
+
+      filter: blur(38px);
+
+      z-index: 0;
+    }
+
+    /* ==========================================================
+       TRANSPARENT IMAGE
+    ========================================================== */
+
+    .portrait {
+      position: relative;
+      z-index: 3;
+
+      width: min(38vw, 510px);
+      height: min(38vw, 510px);
+
+      object-fit: contain;
+      object-position: center bottom;
+
+      background: transparent;
+
+      filter:
+        drop-shadow(
+          0 28px 38px rgba(0,0,0,.4)
+        );
+
+      transform: translateX(-2%);
+    }
+
+    /* ==========================================================
+       CORNER DETAIL
+    ========================================================== */
+
+    .corner-mark {
+      position: absolute;
+
+      right: 10%;
+      bottom: 7%;
+
+      width: 45px;
+      height: 45px;
+
+      border-right: 2px solid var(--blue-light);
+      border-bottom: 2px solid var(--blue-light);
+
+      z-index: 5;
+    }
+
+    /* ==========================================================
+       INFORMATION SECTION
+    ========================================================== */
+
+    .information-section {
+      position: relative;
+
+      width: 100%;
+      height: 30%;
+      min-height: 0;
+
+      padding:
+        0
+        clamp(30px, 7vw, 115px)
+        34px;
+
+      display: flex;
+      align-items: flex-end;
+
+      background:
+        linear-gradient(
+          180deg,
+          #0A2B50 0%,
+          #071F3C 100%
+        );
+    }
+
+    /* ==========================================================
+       INFORMATION GRID
+    ========================================================== */
+
+    .information-grid {
+      width: 100%;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      background:
+        rgba(255,255,255,.035);
+
+      border-top:
+        1px solid rgba(160,205,255,.23);
+
+      border-bottom:
+        1px solid rgba(160,205,255,.12);
+
+      border-radius: 5px;
+
+      overflow: hidden;
+    }
+
+    .information-item {
+      position: relative;
+
+      min-height: 125px;
+
+      padding:
+        25px
+        25px
+        24px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      border-right:
+        1px solid rgba(255,255,255,.12);
+    }
+
+    .information-item:first-child {
+      padding-left: 30px;
+    }
+
+    .information-item:last-child {
+      border-right: 0;
+    }
+
+    .information-item::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: -1px;
+
+      width: 42px;
+      height: 3px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #07529A,
+          #168BFF
+        );
+
+      box-shadow:
+        0 0 15px rgba(22,139,255,.3);
+    }
+
+    /* ==========================================================
+       INFORMATION LABEL
+    ========================================================== */
+
+    .information-label {
+      display: block;
+
+      margin-bottom: 11px;
+
+      color: #91B5D8;
+
+      font-size: 10px;
+      font-weight: 800;
+
+      letter-spacing: 2.1px;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================
+       INFORMATION VALUE
+    ========================================================== */
+
+    .information-value {
+      color: #FFFFFF;
+
+      font-size:
+        clamp(13px, 1.15vw, 16px);
+
+      font-weight: 600;
+
+      line-height: 1.6;
+
+      overflow-wrap: anywhere;
+    }
+
+    .information-value a {
+      color: #FFFFFF;
+
+      transition:
+        color 180ms ease;
+    }
+
+    .information-value a:hover {
+      color: #82C2FF;
+    }
+
+    .arrow {
+      color: #65B3FF;
+      margin-left: 4px;
+      font-size: 15px;
+    }
+
+    /* ==========================================================
+       FOOTER
+    ========================================================== */
+
+    .footer-mark {
+      position: absolute;
+
+      right: clamp(30px, 7vw, 115px);
+      bottom: 8px;
+
+      color: #829CB8;
+
+      font-size: 8px;
+      font-weight: 800;
+
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================
+       TABLET
+    ========================================================== */
+
+    @media (max-width: 900px) {
+      .hero {
+        height: 69%;
+        grid-template-columns: 53% 47%;
+      }
+
+      .hero-left {
+        padding: 30px 20px 35px;
+      }
+
+      .name {
+        font-size: clamp(40px, 5.2vw, 55px);
+        letter-spacing: -2.5px;
+      }
+
+      .leadership-copy {
+        max-width: 380px;
+      }
+
+      .portrait-stage {
+        width: 42vw;
+        height: 42vw;
+      }
+
+      .portrait {
+        width: 40vw;
+        height: 40vw;
+      }
+
+      .information-section {
+        height: 31%;
+        padding: 0 22px 25px;
+      }
+
+      .information-item {
+        min-height: 110px;
+        padding: 18px 15px;
+      }
+
+      .information-item:first-child {
+        padding-left: 20px;
+      }
+
+      .information-value {
+        font-size: 12px;
+      }
+    }
+
+    /* ==========================================================
+       MOBILE
+    ========================================================== */
+
+    @media (max-width: 600px) {
+      .hero {
+        height: 68%;
+        grid-template-columns: 58% 42%;
+      }
+
+      .hero-left {
+        padding: 25px 8px 20px 17px;
+      }
+
+      .eyebrow {
+        gap: 7px;
+        margin-bottom: 15px;
+        font-size: 5.5px;
+        letter-spacing: 1.5px;
+      }
+
+      .eyebrow-line {
+        width: 19px;
+      }
+
+      .name {
+        font-size: clamp(29px, 7.4vw, 42px);
+        letter-spacing: -1.8px;
+        white-space: nowrap;
+      }
+
+      .name-accent {
+        width: 42px;
+        height: 3px;
+        margin-top: 15px;
+      }
+
+      .designation {
+        margin-top: 11px;
+        font-size: 13px;
+      }
+
+      .company {
+        margin-top: 5px;
+        font-size: 5.5px;
+        letter-spacing: 1.1px;
+      }
+
+      .leadership-copy {
+        margin-top: 14px;
+        max-width: 220px;
+        font-size: 8px;
+        line-height: 1.5;
+      }
+
+      .location {
+        margin-top: 13px;
+        font-size: 5.5px;
+        letter-spacing: .8px;
+      }
+
+      .location-icon {
+        width: 10px;
+        height: 10px;
+      }
+
+      .portrait-stage {
+        width: 100%;
+        height: 100%;
+        transform: translateX(-5px);
+      }
+
+      .portrait {
+        width: 125%;
+        height: 125%;
+        max-width: none;
+        max-height: none;
+
+        transform:
+          translateX(-5%)
+          translateY(1%);
+      }
+
+      .portrait-stage::before {
+        width: 82%;
+        height: 72%;
+        right: -4%;
+        bottom: 12%;
+      }
+
+      .portrait-stage::after {
+        width: 72%;
+        height: 65%;
+        right: 5%;
+        bottom: 16%;
+      }
+
+      .corner-mark {
+        width: 25px;
+        height: 25px;
+        right: 5%;
+        bottom: 14%;
+      }
+
+      .information-section {
+        height: 32%;
+        padding: 0 12px 13px;
+      }
+
+      .information-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .information-item {
+        min-height: 76px;
+        padding: 11px 9px;
+
+        border-right: 1px solid rgba(255,255,255,.12);
+        border-bottom: 1px solid rgba(255,255,255,.12);
+      }
+
+      .information-item:first-child {
+        padding-left: 12px;
+      }
+
+      .information-item:nth-child(2),
+      .information-item:nth-child(4) {
+        border-right: 0;
+      }
+
+      .information-item:nth-child(3),
+      .information-item:nth-child(4) {
+        border-bottom: 0;
+      }
+
+      .information-item::before {
+        width: 24px;
+        height: 2px;
+      }
+
+      .information-label {
+        margin-bottom: 6px;
+        font-size: 6px;
+        letter-spacing: 1.2px;
+      }
+
+      .information-value {
+        font-size: 9px;
+        line-height: 1.4;
+      }
+
+      .arrow {
+        font-size: 10px;
+      }
+
+      .footer-mark {
+        display: none;
+      }
+    }
+
+    /* ==========================================================
+       SHORT DESKTOP SCREENS
+    ========================================================== */
+
+    @media (max-height: 720px) and (min-width: 601px) {
+      .hero {
+        height: 68%;
+      }
+
+      .hero-left {
+        padding-top: 20px;
+        padding-bottom: 25px;
+      }
+
+      .name {
+        font-size: clamp(42px, 5vw, 65px);
+      }
+
+      .leadership-copy {
+        margin-top: 18px;
+      }
+
+      .portrait-stage {
+        width: 34vw;
+        height: 34vw;
+      }
+
+      .portrait {
+        width: 32vw;
+        height: 32vw;
+      }
+
+      .information-section {
+        height: 32%;
+        padding-bottom: 24px;
+      }
+
+      .information-item {
+        min-height: 105px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="executive-page">
+
+    <!-- ========================================================
+         HERO
+    ========================================================= -->
+
+    <section class="hero">
+
+      <!-- LEFT CONTENT -->
+      <div class="hero-left">
+
+        <div class="hero-copy">
+
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            SANSERA ENGINEERING LIMITED
+          </div>
+
+          <h1 class="name">
+            F.R. Singhvi
+          </h1>
+
+          <div class="name-accent"></div>
+
+          <p class="designation">
+            Vice Chairman
+          </p>
+
+          <div class="company">
+            Leadership · Sansera Engineering
+          </div>
+
+          <p class="leadership-copy">
+            A leadership presence shaped by experience,
+            precision and a long-term commitment to
+            building Sansera's engineering excellence.
+          </p>
+
+          <div class="location">
+
+            <svg
+              class="location-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M19 10C19 15 12 21 12 21S5 15 5 10a7 7 0 1 1 14 0Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+              />
+
+              <circle
+                cx="12"
+                cy="10"
+                r="2.2"
+                stroke="currentColor"
+                stroke-width="1.7"
+              />
+            </svg>
+
+            Karnataka 560105
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT PORTRAIT -->
+      <div class="hero-right">
+
+        <div class="portrait-stage">
+
+          <div class="portrait-glow"></div>
+
+          <!-- Transparent image -->
+          <img
+            src="FR.png"
+            alt="F.R. Singhvi - Vice Chairman"
+            class="portrait"
+          />
+
+          <div class="corner-mark"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================
+         INFORMATION
+    ========================================================= -->
+
+    <section class="information-section">
+
+      <div class="information-grid">
+
+        <!-- COMPANY -->
+        <div class="information-item">
+
+          <span class="information-label">
+            Company
+          </span>
+
+          <div class="information-value">
+            SANSERA ENGINEERING LIMITED
+          </div>
+
+        </div>
+
+        <!-- WEBSITE -->
+        <div class="information-item">
+
+          <span class="information-label">
+            Website
+          </span>
+
+          <div class="information-value">
+
+            <a
+              href="https://www.sansera.in"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              www.sansera.in
+              <span class="arrow">↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- ADDRESS -->
+        <div class="information-item">
+
+          <span class="information-label">
+            Address
+          </span>
+
+          <div class="information-value">
+            No 143/A, Jigani Link Road, Bengaluru
+          </div>
+
+        </div>
+
+        <!-- MAIL -->
+        <div class="information-item">
+
+          <span class="information-label">
+            Mail ID
+          </span>
+
+          <div class="information-value">
+
+            <a href="mailto:fr@sansera.in">
+              fr@sansera.in
+              <span class="arrow">↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+  </main>
+
+</body>
+</html>
