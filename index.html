@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#08264A" />
 
   <title>F.R. Singhvi | Sansera Engineering</title>
@@ -188,6 +187,8 @@
       width: 36px;
       height: 2px;
 
+      flex-shrink: 0;
+
       background: var(--blue-light);
 
       box-shadow:
@@ -301,6 +302,7 @@
     .location-icon {
       width: 16px;
       height: 16px;
+      flex-shrink: 0;
 
       color: var(--blue-light);
     }
@@ -619,10 +621,10 @@
     }
 
     /* ==========================================================
-       TABLET
+       TABLET (769px – 900px)
     ========================================================== */
 
-    @media (max-width: 900px) {
+    @media (min-width: 769px) and (max-width: 900px) {
       .hero {
         height: 69%;
         grid-template-columns: 53% 47%;
@@ -671,170 +673,10 @@
     }
 
     /* ==========================================================
-       MOBILE
-    ========================================================== */
-
-    @media (max-width: 600px) {
-      .hero {
-        height: 68%;
-        grid-template-columns: 58% 42%;
-      }
-
-      .hero-left {
-        padding: 25px 8px 20px 17px;
-      }
-
-      .eyebrow {
-        gap: 7px;
-        margin-bottom: 15px;
-        font-size: 5.5px;
-        letter-spacing: 1.5px;
-      }
-
-      .eyebrow-line {
-        width: 19px;
-      }
-
-      .name {
-        font-size: clamp(29px, 7.4vw, 42px);
-        letter-spacing: -1.8px;
-        white-space: nowrap;
-      }
-
-      .name-accent {
-        width: 42px;
-        height: 3px;
-        margin-top: 15px;
-      }
-
-      .designation {
-        margin-top: 11px;
-        font-size: 13px;
-      }
-
-      .company {
-        margin-top: 5px;
-        font-size: 5.5px;
-        letter-spacing: 1.1px;
-      }
-
-      .leadership-copy {
-        margin-top: 14px;
-        max-width: 220px;
-        font-size: 8px;
-        line-height: 1.5;
-      }
-
-      .location {
-        margin-top: 13px;
-        font-size: 5.5px;
-        letter-spacing: .8px;
-      }
-
-      .location-icon {
-        width: 10px;
-        height: 10px;
-      }
-
-      .portrait-stage {
-        width: 100%;
-        height: 100%;
-        transform: translateX(-5px);
-      }
-
-      .portrait {
-        width: 125%;
-        height: 125%;
-        max-width: none;
-        max-height: none;
-
-        transform:
-          translateX(-5%)
-          translateY(1%);
-      }
-
-      .portrait-stage::before {
-        width: 82%;
-        height: 72%;
-        right: -4%;
-        bottom: 12%;
-      }
-
-      .portrait-stage::after {
-        width: 72%;
-        height: 65%;
-        right: 5%;
-        bottom: 16%;
-      }
-
-      .corner-mark {
-        width: 25px;
-        height: 25px;
-        right: 5%;
-        bottom: 14%;
-      }
-
-      .information-section {
-        height: 32%;
-        padding: 0 12px 13px;
-      }
-
-      .information-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .information-item {
-        min-height: 76px;
-        padding: 11px 9px;
-
-        border-right: 1px solid rgba(255,255,255,.12);
-        border-bottom: 1px solid rgba(255,255,255,.12);
-      }
-
-      .information-item:first-child {
-        padding-left: 12px;
-      }
-
-      .information-item:nth-child(2),
-      .information-item:nth-child(4) {
-        border-right: 0;
-      }
-
-      .information-item:nth-child(3),
-      .information-item:nth-child(4) {
-        border-bottom: 0;
-      }
-
-      .information-item::before {
-        width: 24px;
-        height: 2px;
-      }
-
-      .information-label {
-        margin-bottom: 6px;
-        font-size: 6px;
-        letter-spacing: 1.2px;
-      }
-
-      .information-value {
-        font-size: 9px;
-        line-height: 1.4;
-      }
-
-      .arrow {
-        font-size: 10px;
-      }
-
-      .footer-mark {
-        display: none;
-      }
-    }
-
-    /* ==========================================================
        SHORT DESKTOP SCREENS
     ========================================================== */
 
-    @media (max-height: 720px) and (min-width: 601px) {
+    @media (max-height: 720px) and (min-width: 769px) {
       .hero {
         height: 68%;
       }
@@ -869,6 +711,260 @@
 
       .information-item {
         min-height: 105px;
+      }
+    }
+
+    /* ==========================================================
+       MOBILE & SMALL TABLET (≤ 768px) — stacked layout
+    ========================================================== */
+
+    @media (max-width: 768px) {
+      html,
+      body {
+        height: auto;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .executive-page {
+        height: auto;
+        min-height: 100svh;
+        overflow: visible;
+      }
+
+      .hero {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+      }
+
+      .hero::after {
+        display: none;
+      }
+
+      /* Text block */
+      .hero-left {
+        order: 1;
+        width: 100%;
+        padding:
+          max(56px, env(safe-area-inset-top))
+          24px
+          28px;
+      }
+
+      .hero-copy {
+        max-width: 100%;
+      }
+
+      .eyebrow {
+        gap: 10px;
+        margin-bottom: 20px;
+        font-size: 10px;
+        letter-spacing: 2.4px;
+      }
+
+      .eyebrow-line {
+        width: 28px;
+      }
+
+      .name {
+        font-size: clamp(36px, 11.5vw, 56px);
+        letter-spacing: -2px;
+        white-space: nowrap;
+      }
+
+      .name-accent {
+        width: 64px;
+        height: 4px;
+        margin-top: 20px;
+      }
+
+      .designation {
+        margin-top: 16px;
+        font-size: 20px;
+        letter-spacing: -.3px;
+      }
+
+      .company {
+        margin-top: 8px;
+        font-size: 11px;
+        letter-spacing: 2px;
+        line-height: 1.5;
+      }
+
+      .leadership-copy {
+        max-width: 100%;
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .location {
+        margin-top: 20px;
+        font-size: 11px;
+        letter-spacing: 1.2px;
+      }
+
+      .location-icon {
+        width: 15px;
+        height: 15px;
+      }
+
+      /* Portrait */
+      .hero-right {
+        order: 2;
+        width: 100%;
+        padding: 0 24px;
+        overflow: hidden;
+      }
+
+      .portrait-stage {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
+      }
+
+      .portrait {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        transform: none;
+      }
+
+      .portrait-stage::before {
+        width: 78%;
+        height: 84%;
+        right: 6%;
+        bottom: 4%;
+      }
+
+      .portrait-stage::after {
+        width: 66%;
+        height: 76%;
+        right: 13%;
+        bottom: 9%;
+      }
+
+      .portrait-glow {
+        width: 80%;
+        height: 80%;
+        right: 8%;
+        bottom: 6%;
+      }
+
+      .corner-mark {
+        width: 32px;
+        height: 32px;
+        right: 12%;
+        bottom: 8%;
+      }
+
+      /* Information cards */
+      .information-section {
+        order: 3;
+        height: auto;
+        padding: 36px 16px max(28px, env(safe-area-inset-bottom));
+        align-items: stretch;
+      }
+
+      .information-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-radius: 8px;
+      }
+
+      .information-item {
+        min-height: 100px;
+        padding: 18px 16px;
+        justify-content: center;
+        border-right: 1px solid rgba(255,255,255,.12);
+        border-bottom: 1px solid rgba(255,255,255,.12);
+      }
+
+      .information-item:first-child {
+        padding-left: 16px;
+      }
+
+      /* 2×2 borders: odd items get right border, first row gets bottom border */
+      .information-item:nth-child(even) {
+        border-right: 0;
+      }
+
+      .information-item:nth-child(n + 3) {
+        border-bottom: 0;
+      }
+
+      .information-item:last-child {
+        border-right: 0;
+        border-bottom: 0;
+      }
+
+      .information-item::before {
+        width: 28px;
+        height: 2px;
+      }
+
+      .information-label {
+        margin-bottom: 8px;
+        font-size: 9px;
+        letter-spacing: 1.8px;
+      }
+
+      .information-value {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .arrow {
+        font-size: 12px;
+      }
+
+      .footer-mark {
+        display: none;
+      }
+    }
+
+    /* ==========================================================
+       SMALL PHONES (≤ 380px)
+    ========================================================== */
+
+    @media (max-width: 380px) {
+      .hero-left {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .name {
+        font-size: 36px;
+        letter-spacing: -1.6px;
+      }
+
+      .leadership-copy {
+        font-size: 13px;
+      }
+
+      .hero-right {
+        padding: 0 18px;
+      }
+
+      .information-section {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .information-item {
+        padding: 14px 12px;
+      }
+
+      .information-item:first-child {
+        padding-left: 12px;
+      }
+
+      .information-value {
+        font-size: 12px;
       }
     }
 
@@ -958,7 +1054,6 @@
 
           <div class="portrait-glow"></div>
 
-          <!-- Transparent image -->
           <img
             src="FR.png"
             alt="F.R. Singhvi - Vice Chairman"
@@ -1048,8 +1143,6 @@
         </div>
 
       </div>
-
-
 
     </section>
 
